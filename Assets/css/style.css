@@ -1,0 +1,182 @@
+@import url("fontello.css");
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 1.4em;
+  text-align: center;
+}
+h2{
+    font-size:1.2em;
+    text-align: center;
+}
+p{
+  text-align: justify;
+}
+h1,h2,
+p {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding: 10px;
+}
+.content{
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    min-width: 300px;
+}
+#Distribution{
+  max-width: 300px;
+  display: block;
+  margin: auto;  
+  justify-content: center;
+}
+#stage {
+  width: 100%;
+  height: 150px;
+  padding: 0;
+}
+#Sillas {
+  display: flex;
+  flex-wrap: wrap;
+}
+.silla {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+#Data{
+    display: block;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;  
+  }
+#Data ol{
+    margin: 0;
+}
+
+#alert{
+  margin: 5px auto;
+  display: none;
+  width: 86%;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#mensaje{
+  margin: 0px;
+}
+.ok{
+  background-color: #c9ffad;
+  border: 3px dashed rgba(13,97,2,0.8) ;
+  border-radius: 10px;
+  color: #0d6102;
+}
+.error{
+  background-color: #f3a4a4;
+  border: 3px dashed rgba(156,0,0,0.8) ;
+  border-radius: 10px;
+  color: #9c0000;
+}
+.info{
+  background-color: #a4c9f3;
+  border: 3px dashed rgba(0,55,156,0.8) ;
+  border-radius: 10px;
+  color: #00379c;
+}
+.close{
+  cursor: pointer;
+}
+#flag, #show{
+  display: none;
+} 
+#show:checked ~ #alert{
+  display: flex;
+}
+#flag:checked ~ #alert{
+  display: none;
+}
+#Data form{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    text-align: center;
+}
+form div{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+form div label{
+    width: 40%;
+}
+#row, #state, #seat{
+    margin: 5px;
+    padding: 5px;
+    width: 50%;
+    outline-color:#014463;
+    box-sizing: border-box;
+}
+.submit{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid  #014463;
+    cursor: pointer;
+    background-color: #014463;
+    color: white;
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.3);
+}
+.submit:hover{
+  box-shadow: none;
+  border: none;
+  background-color: #2e98c9;
+  transition: all 0.3s;
+}
+#position{
+  display: none;  
+}
+
+
+@media only screen and (max-width: 880px){
+  h1{
+    font-size: 1.2em;
+  }
+  h2{
+    font-size: 1em;
+  }
+  p, ol, label, #row, #state, #seat, .submit{
+    font-size: 0.8em;
+  }
+  #Data{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 780px){
+  #Data, #Distribution{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 880px){
+  h1{
+    font-size: 1em;
+  }
+  h2{
+    font-size: 0.8em;
+  }
+  p, ol, label, #row, #state, #seat, .submit{
+    font-size: 0.6em;
+  }
+}
